@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mockarr privacy policy</title><meta name="description" content="How the Mockarr Android app handles data."><style>
+:root{--bg:#F7F8FC;--surface:#FFFFFF;--ink:#171A26;--muted:#5B6072;--line:#DDE0EA;--accent:#3949AB;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#10121A;--surface:#181B26;--ink:#E7E9F2;--muted:#A3A8BA;--line:#2A2E3D;--accent:#BAC3FF;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-text-size-adjust:100%}
+main{max-width:720px;margin:0 auto;padding:40px 16px 64px}
+.studio{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-decoration:none}
+h1{font-size:34px;line-height:1.15;margin:8px 0 4px;letter-spacing:-.01em}
+h2{font-size:20px;margin:36px 0 8px}
+.meta{color:var(--muted);margin:0 0 24px}
+a{color:var(--accent)}
+.table{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line)}
+tr:last-child td{border-bottom:0}
+th{font-size:13px;color:var(--muted);font-weight:600}
+li{margin:4px 0}
+.card{display:block;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;margin-top:24px}
+.card h2{margin:0 0 4px}
+.card p{margin:0 0 12px;color:var(--muted)}
+.links a{margin-right:16px;font-weight:600}
+footer{margin-top:48px;color:var(--muted);font-size:14px}
+</style></head>
+<body><main><a class="studio" href="../../">Three Streets Studios</a><h1>Mockarr privacy policy</h1><p class="meta">Effective 29 September 2026</p><p>Mockarr is an Android app by Three Streets Studios that plays back simulated locations through
+Android's official mock location developer feature. It has no accounts, no sign-in, no
+advertising, and no analytics or crash-reporting library. This page explains the little data that
+does leave your device, and why.</p>
+<h2>What Mockarr does not do</h2>
+<ul>
+<li>It does not collect or store any personal information on our servers — we do not run any servers.</li>
+<li>It does not read your contacts, messages, files, or the location reported to other apps.</li>
+<li>It contains no advertising, analytics or crash-reporting libraries, and it does not sell or
+  share data for advertising.</li>
+<li>It does not hide its mock status from other apps.</li>
+</ul>
+<h2>Data that leaves your device, and where it goes</h2>
+<p>Mockarr needs a few online services to draw the map and plan routes. Each request carries only
+what that request needs, is sent over HTTPS, and is used by us only in memory to answer that
+request — Mockarr keeps no copy of it off the device.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>What is sent</th>
+<th>Why</th>
+<th>Sent to</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The coordinates of the stops you place, and the route between them</td>
+<td>To fetch a road route and its elevation profile</td>
+<td>The <strong>routing service</strong> and the <strong>elevation service</strong></td>
+</tr>
+<tr>
+<td>The coordinates of a stop you tap on the map</td>
+<td>To show the place's name instead of "Stop 2"</td>
+<td>The <strong>place-search service</strong></td>
+</tr>
+<tr>
+<td>The text you type into search, plus the map's current centre and zoom</td>
+<td>To find places near what you are looking at</td>
+<td>The <strong>place-search service</strong></td>
+</tr>
+<tr>
+<td>The map area you are viewing (tile coordinates)</td>
+<td>To download the map tiles for that area</td>
+<td>The <strong>map-tile service</strong></td>
+</tr>
+<tr>
+<td>Your device's real location — only when you tap "Go to my location" or start a drive from "My location", and only after you grant the location permission</td>
+<td>To centre the map on you, or to start the drive where you are</td>
+<td>Read from Android's location service on the device; it becomes a stop coordinate or map position and is sent like any other</td>
+</tr>
+</tbody>
+</table></div>
+<p>The current providers are listed at the end of this page. They are independent services with
+their own privacy policies; Mockarr sends each of them the minimum above and identifies itself
+with a user-agent string containing the app name and version.</p>
+<h2>Google Play services on your device</h2>
+<p>While a drive or a held location is running, Mockarr hands the simulated positions to Google Play
+services on your device, using its official mock mode, so that apps which get their location from
+Play services see the same simulated drive. Only the simulated positions are passed on, and only
+on the device; Mockarr sends nothing else to Google. When the session ends, mock mode is switched
+off.</p>
+<h2>Data stored on your device</h2>
+<p>Saved routes, the route you are building, settings and the map-tile cache are stored only on your
+device, in the app's private storage. Saved routes and settings are included in Android's standard
+app backup when you have backup enabled for the device; the tile cache is not. Uninstalling the
+app deletes everything.</p>
+<h2>Permissions</h2>
+<ul>
+<li><strong>Location</strong> (fine/coarse): required by Android to run a location-type foreground service, and
+  used for "Go to my location" and "My location" starts. Mockarr never sends your real location
+  anywhere on its own.</li>
+<li><strong>Notifications</strong>: the playback controls in the ongoing notification.</li>
+<li><strong>Mock location</strong> (Developer Options): what lets Mockarr set the location other apps see.</li>
+</ul>
+<h2>Children</h2>
+<p>Mockarr is not directed at children and is rated for adults; it requires Android Developer
+Options to be enabled.</p>
+<h2>Changes</h2>
+<p>When a provider changes or the app starts doing something new with data, this page changes first
+and the app's "About" screen credits change with it.</p>
+<h2>Contact</h2>
+<p>Questions about this policy: <a href="mailto:threestreetstudios@gmail.com">threestreetstudios@gmail.com</a></p>
+<h2>Current providers</h2>
+<ul>
+<li>Routing and place search: Geoapify (<a href="https://www.geoapify.com/">https://www.geoapify.com/</a>) — with the public OSRM demo server
+  (<a href="https://project-osrm.org/">https://project-osrm.org/</a>) and Photon by komoot (<a href="https://photon.komoot.io/">https://photon.komoot.io/</a>) as fallbacks</li>
+<li>Elevation: Terrain Tiles on AWS Open Data (Mapzen data, <a href="https://registry.opendata.aws/terrain-tiles/">https://registry.opendata.aws/terrain-tiles/</a>)</li>
+<li>Map tiles and style: OpenFreeMap (<a href="https://openfreemap.org/">https://openfreemap.org/</a>); map data © OpenStreetMap contributors</li>
+<li>Simulated-location delivery to other apps: Google Play services, on the device (see above)</li>
+</ul><footer>© 2026 Three Streets Studios · <a href="mailto:threestreetstudios@gmail.com">threestreetstudios@gmail.com</a></footer></main></body></html>
